@@ -21,7 +21,7 @@ while (count < 3)
     if (array[count] > max)
     {
         max = array[count];
-        count++;
     }
+    count++;
 }
-Console.WriteLine($"No, the square of {max} ");
+Console.WriteLine($"Максимальное число = {max} ");
