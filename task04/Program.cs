@@ -14,13 +14,13 @@ Console.Write("Введите третье целое число: ");
 int num3 = Convert.ToInt32(Console.ReadLine());
 
 
-//                                          Вариант №1
+//                                          Вариант №1 
 
 int[] array = { num1, num2, num3 };
 int max = num1;
-int count = array.Length;
+int count = 1;
 
-while (count < 3)
+while (count < array.Length)
 {
     if (array[count] > max)
     {
@@ -34,10 +34,10 @@ Console.WriteLine($"Максимальное число = {max} ");
 //                                          вариант №2
 
 // int[] array = { num1, num2, num3 };
-// int max = 0;
+// int max = num1;
 // int count = array.Length;
 
-// for (int i = 0; i < count; i++)
+// for (int i = 1; i < count; i++)
 // {
 //     if (array[i] > max)
 //     {
@@ -47,12 +47,13 @@ Console.WriteLine($"Максимальное число = {max} ");
 // Console.WriteLine($"Максимальное число = {max} ");
 
 
+
 //                                          вариант №3
 
 // int max = num1;
 
-// if(num2 > num1) max = num2;
+// if(num2 > max) max = num2;
 
-// if(num3 > num1) max = num3;
+// if(num3 > max) max = num3;
 
 // Console.WriteLine($"Максимальное число = {max} ");
