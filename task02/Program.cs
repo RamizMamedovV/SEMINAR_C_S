@@ -15,7 +15,7 @@ if(num1 > num2 )
 }
 else if(num1 == num2 ) 
 {
-    Console.WriteLine($"Номер {num1} = {num2}" );
+    Console.WriteLine($"Вы ввели равнозначные числа! {num1} = {num2}" );
 }
 else 
 {
