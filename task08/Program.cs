@@ -10,7 +10,11 @@ if (num < 0)
 {
     Console.Write($"Вы ввели отрицательное число! ");
 }
-else if (num < 2)
+else if (num == 0)
+{
+    Console.Write($"Число ноль не считается ни положительным, ни отрицательным! ");
+}
+else if (num == 1)
 {
     Console.Write($"Нет чётных чисел в '{num}'! ");
 }
