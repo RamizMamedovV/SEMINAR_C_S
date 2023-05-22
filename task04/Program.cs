@@ -16,18 +16,12 @@ int num3 = Convert.ToInt32(Console.ReadLine());
 
 //                                          Вариант №1 
 
-int[] array = { num1, num2, num3 };
 int max = num1;
-int count = 1;
 
-while (count < array.Length)
-{
-    if (array[count] > max)
-    {
-        max = array[count];
-    }
-    count++;
-}
+if(num2 > max) max = num2;
+
+if(num3 > max) max = num3;
+
 Console.WriteLine($"Максимальное число = {max} ");
 
 
@@ -50,10 +44,16 @@ Console.WriteLine($"Максимальное число = {max} ");
 
 //                                          вариант №3
 
+// int[] array = { num1, num2, num3 };
 // int max = num1;
+// int count = 1;
 
-// if(num2 > max) max = num2;
-
-// if(num3 > max) max = num3;
-
+// while (count < array.Length)
+// {
+//     if (array[count] > max)
+//     {
+//         max = array[count];
+//     }
+//     count++;
+// }
 // Console.WriteLine($"Максимальное число = {max} ");
