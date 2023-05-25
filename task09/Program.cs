@@ -3,7 +3,7 @@
 // 78 -> 8
 
 int num = new Random().Next(10, 100);
-Console.Write($"Из случайного числа: {num}, наибольшая цифра: ");
+Console.Write($"Из случайного числа в дпапазоне [10, 99]: {num}, наибольшая цифра-> ");
 
 int digital1 = num / 10;
 int digital2 = num % 10;
