@@ -8,5 +8,8 @@ Console.Write($"Из случайного числа в дпапазоне [10, 
 int digit1 = num / 10;
 int digit2 = num % 10;
 
-if (digit1 > digit2) Console.Write(digit1);
-else Console.Write(digit2);
+if (digit1 > digit2) Console.WriteLine(digit1);
+else Console.WriteLine(digit2);
+
+Console.Write($"Из случайного числа в дпапазоне [10, 99]: {num}, наибольшая цифра-> ");
+Console.WriteLine(digit1 > digit2 ? digit1 : digit2);
