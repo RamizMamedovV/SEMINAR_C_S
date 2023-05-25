@@ -3,8 +3,9 @@
 // 768 -> 78
 
 int num = new Random().Next(100, 1000);
-Console.Write($"{num}-> ");
-Console.Write(DeleteSecondDigit(num));
+Console.WriteLine($"Трёхзначное число: {num}-> ");
+int delSecondDigit = DeleteSecondDigit(num);
+Console.Write($"Число без второй цифры: {delSecondDigit}");
 
 int DeleteSecondDigit(int number)
 {
