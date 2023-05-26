@@ -7,17 +7,21 @@ Console.Write("Введите трёхзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 bool res = IsThreeDigits(num);
-Console.WriteLine(res ? SecondDigit(num) : "Вы ввели не трёхзначное число: ");
+Console.WriteLine(res
+            ? $"Вторая цмфра этого числа: {SecondDigit(num)}"
+            : "Вы ввели не трёхзначное число: ");
 
-string SecondDigit(int number)
+int SecondDigit(int number)
 {
     int res = number / 10;
     res = res % 10;
-    return $"Вторая цмфра этого числа: {res}";
+    return res;
 }
 
 
-bool IsThreeDigits( int val)
+bool IsThreeDigits(int val)
 {
-    return val > 99 && val < 1000 || val < -99 && val > -1000 ? true : false;
+    return val > 99 && val < 1000 
+            || val < -99 && val > -1000 
+            ? true : false;
 }
