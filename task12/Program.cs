@@ -18,9 +18,7 @@ else Console.Write($"Число {num1} меньше числа {num2} ");
 
 int Remainder(int number1, int number2)
 {
-    int res = 0;
-    if(number1 > number2) res = number1 % number2;
-    else res = -1;
+    int res = number1 > number2 ? number1 % number2 : -1;
 
     return res;
 }
