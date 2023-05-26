@@ -13,8 +13,7 @@ Console.WriteLine(res
 
 int SecondDigit(int number)
 {
-    int res = number / 10;
-    res = res % 10;
+    int res = number / 10 % 10;
     return res;
 }
 
