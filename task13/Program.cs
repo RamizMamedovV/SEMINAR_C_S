@@ -7,7 +7,7 @@ Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 bool check = IsThreeDigits(num);
-Console.WriteLine(check ? ThirdDigit(num) : "Третьей цифры нет");
+Console.WriteLine(check ? $"Третья цифра: {ThirdDigit(num)}" : "Третьей цифры нет");
 
 bool IsThreeDigits(int val)
 {
@@ -16,7 +16,7 @@ bool IsThreeDigits(int val)
 
 int ThirdDigit(int number)
 {
-    while(number > 999)
+    while(number > 999 || number < -999)
     {
         number = number / 10;
     }
