@@ -28,9 +28,11 @@ void CubicTable(int num)
 {
     if (num > 0)
     {
+        Console.WriteLine($"{num} ->");
         for (int i = 1; i <= num; i++)
         {
-            Console.WriteLine($"{i,3} -> {i * i * i,4}");
+            
+            Console.WriteLine($"{i,3} | {i * i * i,4}");
         }
         UserEnter(exit, continuemessage);
     }
