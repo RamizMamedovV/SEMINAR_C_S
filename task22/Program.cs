@@ -4,13 +4,14 @@
 // 5 -> 1, 4, 9, 16, 25.
 // 2 -> 1,4
 
- PrintUser("Введите число 'положительное число больше нуля: ");
+ PrintUser("Введите положительное число больше нуля: ");
 
 void PrintUser(string mes)
 {
-    Console.WriteLine(mes);
+    Console.WriteLine($"Для выхода нажмите '0' или {mes}");
     int number = Convert.ToInt32(Console.ReadLine());
-    Tabl(number);
+    if(number == 0) return;
+    else Tabl(number);
 }
 
 void Tabl(int num)
@@ -21,9 +22,10 @@ void Tabl(int num)
         {
             Console.WriteLine($"{i} -> {i * i}");
         }
+            PrintUser("для продолжения введите положительное число больше нуля: ");
     }
     else
     {
-        Console.WriteLine($"Введите только положительное число");
+        PrintUser($"Вводите только положительное число");
     }
 }
