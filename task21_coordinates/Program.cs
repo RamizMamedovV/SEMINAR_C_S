@@ -13,8 +13,10 @@ string yofb = "Введите координаты Y для точки B: ";
 string zofb = "Введите координаты Z для точки B: ";
 
 string checkcontinue = "Нажмите '1' для продолжения или '2' для выхода: ";
+string rounvalue = "Введите количество цифр для округления после запятой: ";
 
-CheckContinue();
+//CheckContinue();
+UserPrint();
 
 void CheckContinue()
 {
@@ -39,17 +41,19 @@ void UserPrint()
     Console.Write(yofb);
     int by = Convert.ToInt32(Console.ReadLine());
     Console.Write(zofb);
-    int bz = Convert.ToInt32(Console.ReadLine());    
+    int bz = Convert.ToInt32(Console.ReadLine());
+    Console.Write(rounvalue);
+    int rv = Convert.ToInt32(Console.ReadLine());
 
-    Distance3D(ax, ay, az, bx, by, bz);
+    Distance3D(ax, ay, az, bx, by, bz, rv);
 
 }
 
-void Distance3D(int ax, int ay, int az, int bx, int by, int bz)
+void Distance3D(int ax, int ay, int az, int bx, int by, int bz, int rv)
 {
     double distance = Math.Sqrt((bx -ax)*(bx -ax) + (by - ay)*(by - ay) +
                                      (bz - az)*(bz - az));
-    double result = Math.Round(distance, 2, MidpointRounding.ToZero);
+    double result = Math.Round(distance, rv, MidpointRounding.ToZero);
     Console.WriteLine($" -> {result}");
     CheckContinue();
 }
