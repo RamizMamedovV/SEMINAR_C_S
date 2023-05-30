@@ -15,7 +15,6 @@ string zofb = "Введите координаты Z для точки B: ";
 string checkcontinue = "Нажмите '1' для продолжения или '2' для выхода: ";
 string rounvalue = "Введите количество цифр для округления после запятой: ";
 
-//CheckContinue();
 UserPrint();
 
 void CheckContinue()
