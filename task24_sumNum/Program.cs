@@ -23,16 +23,16 @@ void CheckEnter(int num)
 {
     if (num < 0) User(continuemessage);
     else if (num == 0) return;
-    else SumNumber(num);
+    else SumNumbers(num);
 }
 
-void SumNumber(int num)
+void SumNumbers(int num)
 {
     int sum = 0;
     for (int i = 1; i <= num; i++)
     {
         sum += i;
-        Console.WriteLine($"{i, 3} -> {sum,4}");
     }
+    Console.WriteLine($"{num} -> {sum,4}");
     User(continuemessage);
 }
