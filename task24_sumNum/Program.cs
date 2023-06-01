@@ -15,25 +15,25 @@ User(entermessage);
 
 void User(string message)
 {
+    int sum = 0;
     Console.Write(message);
     int num = Convert.ToInt32(Console.ReadLine());
-    CheckEnter(num);
-}
-
-void CheckEnter(int num)
-{
     if (num < 0) User(continuemessage);
     else if (num == 0) return;
-    else SumNumbers(num);
+    else
+    {
+        sum = SumNumbers(num);
+        Console.WriteLine($"{result} {num} -> {sum,4}");
+        User(continuemessage);
+    }
 }
 
-void SumNumbers(int num)
+int SumNumbers(int num)
 {
     int sum = 0;
     for (int i = 1; i <= num; i++)
     {
         sum += i;
     }
-    Console.WriteLine($"{result} {num} -> {sum,4}");
-    User(continuemessage);
+    return sum;
 }
