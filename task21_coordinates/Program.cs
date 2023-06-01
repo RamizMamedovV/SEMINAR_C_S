@@ -4,7 +4,7 @@
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
-// для ввода и вывода текста создаем текст на удобном языке
+// создаем текстовые переменные на удобном языке
 
 string xofa = "Введите координаты X для точки А: ";
 string yofa = "Введите координаты Y для точки А: ";
@@ -15,20 +15,20 @@ string yofb = "Введите координаты Y для точки B: ";
 string zofb = "Введите координаты Z для точки B: ";
 
 string checkcontinue = "Нажмите '1' для продолжения или '2' для выхода: ";
-string rounvalue = "Введите количество цифр для округления после запятой: ";
+string roundvalue = "Введите количество цифр для округления после запятой: ";
 
-UserPrint();
+User();
 
 void CheckContinue()
 {
     Console.Write($"{checkcontinue}");
     string str = Console.ReadLine();
-    if(str == "1") UserPrint();
+    if(str == "1") User();
     else if(str == "2") return;
     else CheckContinue();
 }
 
-void UserPrint()
+void User()
 {
     Console.Write(xofa);
     int ax = Convert.ToInt32(Console.ReadLine());
@@ -43,7 +43,7 @@ void UserPrint()
     int by = Convert.ToInt32(Console.ReadLine());
     Console.Write(zofb);
     int bz = Convert.ToInt32(Console.ReadLine());
-    Console.Write(rounvalue);
+    Console.Write(roundvalue);
     int rv = Convert.ToInt32(Console.ReadLine());
 
     Distance3D(ax, ay, az, bx, by, bz, rv);
