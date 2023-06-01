@@ -17,9 +17,8 @@ User(entermessage);
 void User(string str)
 {
     Console.Write(str);
-    string val = Console.ReadLine();
-    int len = CheckValue(val);
-    int number = Convert.ToInt32(val);
+    int number = Convert.ToInt32(Console.ReadLine());
+    int len = CheckLength(number);
     int res = ReverseNum(number, len);
     if(res == number) Console.WriteLine($"{res} {yes}");
     else Console.WriteLine($"{res} {no}");
@@ -38,11 +37,15 @@ int ReverseNum(int num, int l)
     return rnum;
 }
 
-int CheckValue(string txt)
+
+int CheckLength(int num)
 {
-    for (int i = 0; i < txt.Length; i++)
+    int count = 0;
+    while(num != 0)
     {
-        if (txt[i] == '-') return txt.Length - 1;
+        num = num / 10;
+        count++;
     }
-    return txt.Length;
+    return count;
 }
+
