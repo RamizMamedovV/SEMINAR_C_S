@@ -8,16 +8,16 @@
 // 4 | 64
 // 5 | 125
 
-// для ввода и вывода текста создаем текст на удобном языке
+// создаем текстовые переменные на удобном языке
 
 string entermessage = "введите целое число больше нуля: ";
 string exit = "Для выхода нажмите '0' или ";
 string continuemessage = "для продолжения введите положительное число больше нуля: ";
 string warning = "вводите ТОЛЬКО положительное число: ";
 
-UserEnter(exit, entermessage);
+User(exit, entermessage);
 
-void UserEnter(string str1, string str2)
+void User(string str1, string str2)
 {
     Console.Write(str1 + str2);
     int number = Convert.ToInt32(Console.ReadLine());
@@ -36,7 +36,7 @@ void CubicTable(int num)
             
             Console.WriteLine($"{i,3} | {i * i * i,4}");
         }
-        UserEnter(exit, continuemessage);
+        User(exit, continuemessage);
     }
-    else UserEnter(exit, warning);
+    else User(exit, warning);
 }
