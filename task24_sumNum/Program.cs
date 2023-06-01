@@ -9,6 +9,7 @@
 
 string entermessage = "Введите целое, положительное число: ";
 string continuemessage = "Для выхода нажмите '0' или введите целое, положительное число: ";
+string result = "Сумма чисел от 1 до";
 
 User(entermessage);
 
@@ -33,6 +34,6 @@ void SumNumbers(int num)
     {
         sum += i;
     }
-    Console.WriteLine($"{num} -> {sum,4}");
+    Console.WriteLine($"{result} {num} -> {sum,4}");
     User(continuemessage);
 }
