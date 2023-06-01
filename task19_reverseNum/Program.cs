@@ -5,10 +5,11 @@
 // 12821 -> да
 // 23432 -> да
 
-// для ввода и вывода текста создаем текст на удобном языке
+// создаем текстовые переменные на удобном языке
+
 string entermessage = "Введите целое число: ";
 string yes = "-> Верно, является палиндромом";
-string no = "Нет, не является палиндромом";
+string no = "-> Нет, не является палиндромом";
 
 User(entermessage);
 
@@ -22,7 +23,7 @@ void User(string str)
     int res = ReverseNum(number, len);
     if(res == number) Console.WriteLine($"{res} {yes}");
     else Console.WriteLine($"{res} {no}");
-    //User(entermessage);                 
+    User(entermessage);                 
      //мспользуется для рекурсии. в эом случае, для прерывания одновременно нажмите ctrl + c 
 }
 
