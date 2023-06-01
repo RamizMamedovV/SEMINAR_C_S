@@ -18,12 +18,6 @@ void User(string message)
     CheckEnter(num);
 }
 
-// void User(int val, int num)
-// {
-//     Console.WriteLine($"{val,3} -> {num,4}");
-//     User(continuemessage);
-// }
-
 void CheckEnter(int num)
 {
     if (num < 0) User(continuemessage);
