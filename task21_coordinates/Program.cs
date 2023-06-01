@@ -46,15 +46,20 @@ void User()
     Console.Write(roundvalue);
     int rv = Convert.ToInt32(Console.ReadLine());
 
-    Distance3D(ax, ay, az, bx, by, bz, rv);
+    UserPrint(Distance3D(ax, ay, az, bx, by, bz, rv));
 
 }
 
-void Distance3D(int ax, int ay, int az, int bx, int by, int bz, int rv)
+void UserPrint(double res)
+{
+    Console.WriteLine($" -> {res}");
+    CheckContinue();
+}
+
+double Distance3D(int ax, int ay, int az, int bx, int by, int bz, int rv)
 {
     double distance = Math.Sqrt((bx -ax)*(bx -ax) + (by - ay)*(by - ay) +
                                      (bz - az)*(bz - az));
     double result = Math.Round(distance, rv, MidpointRounding.ToZero);
-    Console.WriteLine($" -> {result}");
-    CheckContinue();
+    return result;
 }
