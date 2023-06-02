@@ -14,12 +14,11 @@ void PrintArray(int[] arr)
         Console.Write(arr[i] + ",");
     }
 }
-int[] FillArray(int[] arr)
+void FillArray(int[] arr)
 {
     Random num = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = num.Next(2);
     }
-    return arr;
 }
