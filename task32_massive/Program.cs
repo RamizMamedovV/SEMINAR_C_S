@@ -14,15 +14,15 @@ void User()
     string endBracket = InputUserString("Введите знак скобки конца массива: ");
     string separateSymbol = InputUserString("Введите знак разделения элементов массива: ");
 
-    int[] array = CreateArray(arraySize, maxValue, maxValue);
+    int[] array = CreateArray(arraySize, minValue, maxValue);
     ArrayPrint(array,startBracket, endBracket, separateSymbol);
     ArrayInversion(array);
     ArrayPrint(array,startBracket, endBracket, separateSymbol);
 
-    InputUserInt("Введите 1 для продолжения или 2 - для выхода:");
+    InputContinue("Введите 1 для продолжения или 2 - для выхода:");
 }
 
-void InpupContinue(string str)
+void InputContinue(string str)
 {
     Console.Write(str);
     int num = Convert.ToInt32(Console.ReadLine());
