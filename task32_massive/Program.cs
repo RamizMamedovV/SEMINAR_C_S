@@ -19,7 +19,7 @@ void User()
     ArrayInversion(array);
     ArrayPrint(array,startBracket, endBracket, separateSymbol);
 
-    InputContinue("Введите 1 для продолжения или 2 - для выхода:");
+    InputContinue("Введите 1 для продолжения или 0 - для выхода:");
 }
 
 void InputContinue(string str)
@@ -28,7 +28,7 @@ void InputContinue(string str)
     int num = Convert.ToInt32(Console.ReadLine());
     if(num == 1) User();
     else if(num == 0) return;
-    else InputUserInt("Введите 1 для продолжения или 2 - для выхода:");
+    else InputUserInt("Введите 1 для продолжения или 0 - для выхода:");
 }
 
 string InputUserString(string str)
@@ -52,11 +52,11 @@ void ArrayPrint(int[] arr, string bracketSt = "[",
                      string bracketEn = "]", string sep = ", ")
 {
     Console.Write(bracketSt);
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < arr.Length -1; i++)
     {
         Console.Write($"{arr[i]} {sep}");
     }
-    Console.WriteLine(bracketEn);
+    Console.WriteLine(arr[arr.Length-1] + bracketEn);
 }
 
 void ArrayInversion(int[] arr)
