@@ -18,8 +18,9 @@ void User()
     int[] array = CreateArray(arraySize, minValue, maxValue);
     ArrayPrint(array,startBracket, endBracket, separateSymbol);
 
-    Console.WriteLine (FindValue(array, findValue) ? $"Да, массив содержит цифру '{findValue}'" 
-                                            : $"Нет, массив не содержит цифру '{findValue}'");
+    Console.WriteLine (FindValue(array, findValue) 
+                            ? $"Да, массив содержит цифру '{findValue}'" 
+                                : $"Нет, массив не содержит цифру '{findValue}'");
 
     InputContinue("Введите 1 для продолжения или 2 - для выхода:");
 }
