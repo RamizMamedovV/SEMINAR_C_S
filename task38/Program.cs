@@ -20,7 +20,8 @@ void User()
     int max = GetArrayMaxElemIndex(array);
     int min = GetArrayMinElemIndex(array);
     Console.WriteLine();
-    System.Console.WriteLine($"Разница макс и мин: {array[max] - array[min]}");
+    double result = array[max] - array[min];
+    System.Console.WriteLine("Разница макс и мин: {0:F2}", result);
     Console.WriteLine();
 
     InputContinue("Введите '1' для продолжения или '0' - для выхода: ");
