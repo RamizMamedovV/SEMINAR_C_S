@@ -21,10 +21,16 @@ void User()
     int min = GetArrayMinElemIndex(array);
     Console.WriteLine();
     double result = array[max] - array[min];
-    System.Console.WriteLine("Разница макс и мин: {0:F2}", result);
+    System.Console.WriteLine(GetFormattedString(round), result);
     Console.WriteLine();
 
     InputContinue("Введите '1' для продолжения или '0' - для выхода: ");
+}
+
+string GetFormattedString(int frmt)
+{
+    string str = "Разница макс и мин: {0:F" + frmt + "}";
+    return str;
 }
 
 int InputUserInt(string str)
