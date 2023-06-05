@@ -15,8 +15,10 @@ void User()
 
     int[] array = new int[arraySize];
     FillArray(array);
+
     int sumOdd = SumOddPositionElem(array);
     ArrayPrint(array);
+    
     System.Console.WriteLine($"Сумму элементов, стоящих на нечётных позицияхе: {sumOdd}");
     Console.WriteLine();
 
