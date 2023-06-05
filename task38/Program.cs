@@ -16,12 +16,16 @@ void User()
     double[] array = new double[arraySize];
     FillArray(array, rnd : round);
     Console.WriteLine();
+
     ArrayPrint(array);
+
     int max = GetArrayMaxElemIndex(array);
     int min = GetArrayMinElemIndex(array);
     Console.WriteLine();
+
     double result = array[max] - array[min];
-    System.Console.WriteLine(GetFormattedString(round), result);
+    string format = GetFormattedString(round);  // строк для форматирования вывода??!!
+    System.Console.WriteLine(format, result);
     Console.WriteLine();
 
     InputContinue("Введите '1' для продолжения или '0' - для выхода: ");
@@ -51,6 +55,7 @@ void InputContinue(string str)
     else InputContinue("Введите '1' для продолжения или '0' - для выхода: ");
 }
 
+//                      Методы для решения Задачи 38
 void ArrayPrint(double[] arr, string bracketSt = "[",
                      string bracketEn = "]", string sep = " | ")
 {
