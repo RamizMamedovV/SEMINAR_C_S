@@ -15,8 +15,10 @@ void User()
 
     int[] array = new int[arraySize];
     FillArray(array);
+
     int evenCount = EvenCounter(array);
     ArrayPrint(array);
+    
     System.Console.WriteLine($"Количество чётных чисел в массиве: {evenCount}");
     Console.WriteLine();
 
