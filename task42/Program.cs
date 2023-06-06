@@ -3,13 +3,13 @@
 // 46 -> 101110
 // 13 -> 1101
 // 2 -> 10
-int num = 46;
+int num = 2;
+int val = 1;
+int res = 0;
 while (num > 0)
 {
-    int val = 1;
-    int res = 0;
-    res += (num % 2)* val;
+    res += (num % 2) * val;
     val *= 10;
-    num = num /2;
-    Console.Write(res);
+    num = num / 2;
 }
+    Console.Write(res);
