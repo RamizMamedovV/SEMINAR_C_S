@@ -49,7 +49,7 @@ void InputContinue(string str)
 int InputUserInt(string str)
 {
     Console.Write(str);
-    string inputUser = Console.ReadLine();
+    string inputUser = Console.ReadLine()!;
     int num = Convert.ToInt32(inputUser);
 
     return num;
