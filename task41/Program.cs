@@ -6,8 +6,9 @@
 int count = 0;
 while (true)
 {
-    Console.Write("Для вывода результат нажмите Enter или продолжайте вводить любое число: ");
-    string user = Console.ReadLine();
+    Console.Write("Для вывода результат нажмите Enter или продолжайте"
+                                + "вводить любое число: ");
+    string user = Console.ReadLine()!;
     if (user != String.Empty)
     {
         int res = Convert.ToInt32(user);
