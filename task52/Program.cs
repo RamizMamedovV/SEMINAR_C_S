@@ -35,24 +35,43 @@ void ArrayMatrixIntPrint(int[,] mtx)
     }
 }
 
-void AverageColumnSum(int[,] mtx)
+void ArrayDoublePrint(double[] arr, int formatVal = 2)
 {
-    int sum = 0;
-    double totColumn = mtx.GetLength(0);
-    double res = 0;
+    System.Console.Write("Среднее арифметическое каждого столбца: ");
+    string str = " {0:f" + formatVal + "}; ";
+    for (int i = 0; i < arr.Length - 1; i++)
+        {
+            Console.Write(str, arr[i]);
+        }
+        string strLast = " {0:f" + formatVal + "}.";
+        Console.Write(strLast, arr[arr.Length - 1]);
 
-        for (int j = 0; j < mtx.GetLength(1); j++)
+}
+
+double[] AverageColumnSum(int[,] mtx)
+{
+    int totRows = mtx.GetLength(0);
+    int totColomns = mtx.GetLength(1);
+
+    double sum = 0;
+    double res = 0;
+    double[] arr = new double[totColomns];
+
+        for (int j = 0; j < totColomns; j++)
         {
             sum = 0;
-            for (int i = 0; i < mtx.GetLength(0); i++)
+            for (int i = 0; i < totRows; i++)
             {
                 sum += mtx[i, j];
             }
-            res = sum / totColumn;
-            Console.WriteLine($" Сумма столбца {j+1} = {res}");
+            res = sum / totRows;
+            arr[j] = res;
+            // Console.WriteLine($" Сумма столбца {j + 1} = {res}");
         }
+        return arr;
 }
 
 int[,] matrix = ArrayMatrixIntCreater(3, 4);
 ArrayMatrixIntPrint(matrix);
-AverageColumnSum(matrix);
+double[] array = AverageColumnSum(matrix);
+ArrayDoublePrint(array);
