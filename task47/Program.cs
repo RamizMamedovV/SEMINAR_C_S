@@ -6,7 +6,7 @@
 // 1   -3,3   8    -9,9
 // 8    7,8  -7,1   9
 
-double[,] CreateMatrixRndInt(int rows, int columns, int minElem = 0, int maxElem = 10)
+double[,] MatrixRndIntCreater(int rows, int columns, int minElem = 0, int maxElem = 10)
 {
     double[,] matrix = new double[rows, columns];
     Random rnd = new Random();
@@ -20,9 +20,9 @@ double[,] CreateMatrixRndInt(int rows, int columns, int minElem = 0, int maxElem
     return matrix;
 }
 
-void PrintMatrix(double[,] matrix, int formatVal = 2)
+void PrinterFormattedMatrix(double[,] matrix, int formatVal = 2)
 {
-    string str = "{0:F" + formatVal + "} ";
+    string str = "  {0:F" + formatVal + "} ";
 
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -34,5 +34,5 @@ void PrintMatrix(double[,] matrix, int formatVal = 2)
     }
 }
 
-double[,] matrix = CreateMatrixRndInt(4, 4);
-PrintMatrix(matrix, 4);
+double[,] matrix = MatrixRndIntCreater(4, 4);
+PrinterFormattedMatrix(matrix, 2);
