@@ -37,14 +37,13 @@ void ArrayMatrixIntPrint(int[,] mtx)
 
 void ArrayDoublePrint(double[] arr, int formatVal = 2)
 {
-    System.Console.Write("Среднее арифметическое каждого столбца: ");
-    string str = " {0:f" + formatVal + "}; ";
+    string formatStr = " {0:f" + formatVal + "}; ";
     for (int i = 0; i < arr.Length - 1; i++)
         {
-            Console.Write(str, arr[i]);
+            Console.Write(formatStr, arr[i]);
         }
-        string strLast = " {0:f" + formatVal + "}.";
-        Console.Write(strLast, arr[arr.Length - 1]);
+        string formatLastStr = " {0:f" + formatVal + "}.";
+        Console.Write(formatLastStr, arr[arr.Length - 1]);
 
 }
 
@@ -66,7 +65,6 @@ double[] AverageColumnSum(int[,] mtx)
             }
             res = sum / totRows;
             arr[j] = res;
-            // Console.WriteLine($" Сумма столбца {j + 1} = {res}");
         }
         return arr;
 }
@@ -74,4 +72,5 @@ double[] AverageColumnSum(int[,] mtx)
 int[,] matrix = ArrayMatrixIntCreater(3, 4);
 ArrayMatrixIntPrint(matrix);
 double[] array = AverageColumnSum(matrix);
+Console.Write("Среднее арифметическое каждого столбца: ");
 ArrayDoublePrint(array);
