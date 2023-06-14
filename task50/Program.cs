@@ -44,12 +44,14 @@ int UserEnter(string str)
 
 bool isExist(int[,] mtx, int rowVal, int columnVal)
 {
-    return (mtx.GetLength(0) >= rowVal && mtx.GetLength(1) >= columnVal) ? true : false;
+    return (mtx.GetLength(0) >= rowVal && rowVal >= 0 
+                && mtx.GetLength(1) >= columnVal && columnVal >= 0) ? true : false;
 }
 
 int[,] matrix = CreateMatrixRndInt(3, 4);
 PrintMatrix(matrix);
 int row = UserEnter("Введите номер строки: ");
 int column = UserEnter("Введите номер столбца: ");
-Console.WriteLine(isExist(matrix, row, column) ? $"значение: {matrix[row, column]}"
-                                :"Нет такого элемента");
+System.Console.WriteLine();
+Console.WriteLine(isExist(matrix, row, column) ? $"значение в массиве: {matrix[row, column]}"
+                                :"Такого элемента в массиве нет");
