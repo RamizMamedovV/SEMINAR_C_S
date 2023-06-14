@@ -38,6 +38,8 @@ void ArrayMatrixIntPrint(int[,] mtx)
 void AverageColumnSum(int[,] mtx)
 {
     int sum = 0;
+    double totColumn = mtx.GetLength(0);
+    double res = 0;
 
         for (int j = 0; j < mtx.GetLength(1); j++)
         {
@@ -46,7 +48,8 @@ void AverageColumnSum(int[,] mtx)
             {
                 sum += mtx[i, j];
             }
-            Console.WriteLine($" Сумма столбца {j+1} = {sum}");
+            res = sum / totColumn;
+            Console.WriteLine($" Сумма столбца {j+1} = {res}");
         }
 }
 
