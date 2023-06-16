@@ -29,6 +29,7 @@ void MatrixIntPrint(int[,] arr)
         }
         System.Console.WriteLine();
     }
+    System.Console.WriteLine();
 }
 
 void ArrayIntPrint(int[] arr)
@@ -37,6 +38,7 @@ void ArrayIntPrint(int[] arr)
     {
         System.Console.Write($"{arr[i],2}");
     }
+    System.Console.WriteLine();
     System.Console.WriteLine();
 }
 
@@ -55,7 +57,7 @@ int[] ReplaceMatrixToArray(int[,] mtx)
     return arr;
 }
 
-void DigitsCounter(int[] arr)
+void ValueCounter(int[] arr)
 {
     int count = 1;
     int val = arr[0];
@@ -64,12 +66,12 @@ void DigitsCounter(int[] arr)
         if (val == arr[i]) count++;
         else
         {
-            System.Console.WriteLine($"Цифра {val} встречаетя {count} раз");
+            System.Console.WriteLine($"Число {val} встречаетя {count} раз");
             val = arr[i];
             count = 1;
         }
     }
-    System.Console.WriteLine($"Цифра {val} встречаетя {count} раз");
+    System.Console.WriteLine($"Число {val} встречаетя {count} раз");
 }
 
 int[,] matrix = MatrixIntCreator(3, 4);
@@ -78,7 +80,6 @@ MatrixIntPrint(matrix);
 int[] array = ReplaceMatrixToArray(matrix);
 ArrayIntPrint(array);
 
-System.Console.WriteLine();
 Array.Sort(array);
 ArrayIntPrint(array);
-DigitsCounter(array);
+ValueCounter(array);
