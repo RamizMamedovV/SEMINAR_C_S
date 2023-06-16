@@ -64,11 +64,12 @@ void DigitsCounter(int[] arr)
         if (val == arr[i]) count++;
         else
         {
-        System.Console.WriteLine($"Цифра {val} встречаетя {count} раз");
-        val = arr[i];
-        count = 1;
+            System.Console.WriteLine($"Цифра {val} встречаетя {count} раз");
+            val = arr[i];
+            count = 1;
         }
     }
+    System.Console.WriteLine($"Цифра {val} встречаетя {count} раз");
 }
 
 int[,] matrix = MatrixIntCreator(3, 4);
