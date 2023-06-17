@@ -77,10 +77,6 @@ void ArrayDescendedSort(int[] arr)
         count++;
     }
 
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write($"{arr[i]} ");
-    }
 }
 
 
@@ -90,6 +86,8 @@ ArrayMatrixIntPrint(matrix);
 MatrixDescendedRowsMaker(matrix);
 Console.WriteLine();
 ArrayMatrixIntPrint(matrix);
+
+
 
 
 //   этот метод не работает корректно из-за скорости потоков????
