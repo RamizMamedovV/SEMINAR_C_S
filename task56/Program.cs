@@ -9,7 +9,7 @@
 // Программа считает сумму элементов в каждой строке 
 // и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
-int[,] ArrayMatrixIntCreater(int rows, int colomns, int minVal = 0, int maxVal = 10)
+int[,] MatrixIntCreater(int rows, int colomns, int minVal = 0, int maxVal = 10)
 {
     int[,] mtx = new int[rows, colomns];
     Random rnd = new Random();
@@ -71,7 +71,7 @@ int ArrayMinRow(int[,] arr)
     return res;
 }
 
-int[,] matrix = ArrayMatrixIntCreater(6, 4);
+int[,] matrix = MatrixIntCreater(6, 4);
 ArrayMatrixIntPrint(matrix);
 
 System.Console.WriteLine();
