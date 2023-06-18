@@ -64,7 +64,7 @@ int[] MatrixRowsSum(int[,] mtx)
     return arr;
 }
 
-int ArrayMinRow(int[] arr)
+int ArrayMinIndex(int[] arr)
 {
     int min = arr[0];
     int res = 0;
@@ -88,5 +88,5 @@ int[] arraySum = MatrixRowsSum(matrix);
 ArrayPrintInt(arraySum);
 
 System.Console.WriteLine();
-int minRow = ArrayMinRow(arraySum);
-Console.WriteLine($"Номер строки с наименьшей суммой элементов: {minRow}");
+int minIndex = ArrayMinIndex(arraySum);
+Console.WriteLine($"Номер строки с наименьшей суммой элементов: {minIndex}");
