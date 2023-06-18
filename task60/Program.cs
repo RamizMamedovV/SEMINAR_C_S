@@ -24,7 +24,7 @@ int[,,] Matrix3DIntCreater(int depth, int rows, int columns, int minVal = 10, in
     return mtx;
 }
 
-void ArrayMatrixIntPrint(int[,,] mtx)
+void Matrix3DIntPrint(int[,,] mtx)
 {
     for (int i = 0; i < mtx.GetLength(0); i++)
     {
@@ -42,4 +42,4 @@ void ArrayMatrixIntPrint(int[,,] mtx)
 
 int[,,] mart3D = Matrix3DIntCreater(3, 4, 5);
 
-ArrayMatrixIntPrint(mart3D);
+Matrix3DIntPrint(mart3D);
