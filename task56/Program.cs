@@ -37,7 +37,7 @@ void MatrixIntPrint(int[,] mtx)
     }
 }
 
-void ArrayPrintInt(int[] arr, string startBracket = "[", string lastBracket = "]")
+void ArrayIntPrint(int[] arr, string startBracket = "[", string lastBracket = "]")
 {
     Console.Write(startBracket);
     for (int i = 0; i < arr.Length - 1; i++)
@@ -85,7 +85,7 @@ MatrixIntPrint(matrix);
 
 System.Console.WriteLine();
 int[] arraySum = MatrixRowsSum(matrix);
-ArrayPrintInt(arraySum);
+ArrayIntPrint(arraySum);
 
 System.Console.WriteLine();
 int minIndex = ArrayMinIndex(arraySum);
