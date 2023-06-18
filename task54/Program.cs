@@ -9,7 +9,7 @@
 // 9 5 3 2
 // 8 4 4 2
 
-int[,] ArrayMatrixIntCreater(int rows, int colomns, int minVal = 0, int maxVal = 10)
+int[,] MatrixIntCreater(int rows, int colomns, int minVal = 0, int maxVal = 10)
 {
     int[,] mtx = new int[rows, colomns];
     Random rnd = new Random();
@@ -25,7 +25,7 @@ int[,] ArrayMatrixIntCreater(int rows, int colomns, int minVal = 0, int maxVal =
     return mtx;
 }
 
-void ArrayMatrixIntPrint(int[,] mtx)
+void MatrixIntPrint(int[,] mtx)
 {
     for (int i = 0; i < mtx.GetLength(0); i++)
     {
@@ -76,16 +76,15 @@ void ArrayDescendedSort(int[] arr)
         }
         count++;
     }
-
 }
 
 
-int[,] matrix = ArrayMatrixIntCreater(3, 4);
-ArrayMatrixIntPrint(matrix);
+int[,] matrix = MatrixIntCreater(6, 4, -9, 100);
+MatrixIntPrint(matrix);
 
 MatrixDescendedRowsMaker(matrix);
 Console.WriteLine();
-ArrayMatrixIntPrint(matrix);
+MatrixIntPrint(matrix);
 
 
 
