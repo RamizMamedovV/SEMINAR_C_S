@@ -25,21 +25,31 @@ int[,] MatrixIntCreater(int rows, int colomns, int minVal = 0, int maxVal = 10)
     return mtx;
 }
 
-void ArrayMatrixIntPrint(int[,] mtx)
+void MatrixIntPrint(int[,] mtx)
 {
     for (int i = 0; i < mtx.GetLength(0); i++)
     {
         for (int j = 0; j < mtx.GetLength(1); j++)
         {
-            Console.Write($"{mtx[i, j],3}");
+            Console.Write($"{mtx[i, j], 3}");
         }
         Console.WriteLine();
     }
 }
 
-int[,] MatrixRowsSum(int[,] mtx)
+void ArrayPrintInt(int[] arr, string startBracket = "[", string lastBracket = "]")
 {
-    int[,] arr = new int[2, mtx.GetLength(0)];
+    Console.Write(startBracket);
+    for (int i = 0; i < arr.Length - 1; i++)
+    {
+        Console.Write($"{arr[i]}, ");
+    }
+    Console.WriteLine($"{arr[arr.Length - 1]}{lastBracket}");
+}
+
+int[] MatrixRowsSum(int[,] mtx)
+{
+    int[] arr = new int[mtx.GetLength(0)];
     int sum = 0;
 
     for (int i = 0; i < mtx.GetLength(0); i++)
@@ -48,36 +58,35 @@ int[,] MatrixRowsSum(int[,] mtx)
         {
             sum += mtx[i, j];
         }
-        arr[0, i] = i;
-        arr[1, i] = sum;
+        arr[i] = sum;
         sum = 0;
     }
     return arr;
 }
 
-int ArrayMinRow(int[,] arr)
+int ArrayMinRow(int[] arr)
 {
-    int min = arr[1, 0];
+    int min = arr[0];
     int res = 0;
 
-    for (int j = 1; j < arr.GetLength(1); j++)
+    for (int i = 1; i < arr.Length; i++)
     {
-        if (arr[1, j] < min)
+        if (arr[i] < min)
         {
-            min = arr[1, j];
-            res = arr[0, j];
+            min = arr[i];
+            res = i;
         }
     }
     return res;
 }
 
-int[,] matrix = MatrixIntCreater(6, 4);
-ArrayMatrixIntPrint(matrix);
+int[,] matrix = MatrixIntCreater(6, 4, -9, 9);
+MatrixIntPrint(matrix);
 
 System.Console.WriteLine();
-int[,] matrixSum = MatrixRowsSum(matrix);
-ArrayMatrixIntPrint(matrixSum);
+int[] arraySum = MatrixRowsSum(matrix);
+ArrayPrintInt(arraySum);
 
 System.Console.WriteLine();
-int minRow = ArrayMinRow(matrixSum);
+int minRow = ArrayMinRow(arraySum);
 Console.WriteLine($"Номер строки с наименьшей суммой элементов: {minRow}");
