@@ -7,7 +7,7 @@
 // 18 20
 // 15 18
 
-int[,] ArrayMatrixIntCreater(int rows, int colomns, int minVal = 0, int maxVal = 10)
+int[,] MatrixIntCreater(int rows, int colomns, int minVal = 0, int maxVal = 10)
 {
     int[,] mtx = new int[rows, colomns];
     Random rnd = new Random();
@@ -23,13 +23,13 @@ int[,] ArrayMatrixIntCreater(int rows, int colomns, int minVal = 0, int maxVal =
     return mtx;
 }
 
-void ArrayMatrixIntPrint(int[,] mtx)
+void MatrixIntPrint(int[,] mtx)
 {
     for (int i = 0; i < mtx.GetLength(0); i++)
     {
         for (int j = 0; j < mtx.GetLength(1); j++)
         {
-            Console.Write($"{mtx[i, j],3}");
+            Console.Write($"{mtx[i, j], 4}");
         }
         Console.WriteLine();
     }
@@ -37,13 +37,12 @@ void ArrayMatrixIntPrint(int[,] mtx)
 
 int[,] MatrixMultiple(int[,] mtx1, int[,] mtx2)
 {
-
     int pow = 0;
     int res = 0;
 
-    int[,] matxMultle = new int[mtx1.GetLength(0), mtx1.GetLength(1)];
+    int[,] matxMultiple = new int[mtx1.GetLength(0), mtx1.GetLength(1)];
 
-    for (int j = 0; j < matxMultle.GetLength(1); j++)
+    for (int j = 0; j < matxMultiple.GetLength(1); j++)
     {
 
         for (int m = 0; m < mtx2.GetLength(1); m++)
@@ -55,22 +54,23 @@ int[,] MatrixMultiple(int[,] mtx1, int[,] mtx2)
                 pow = mtx2[n, m] * mtx1[j, n];
                 res += pow;
             }
-            matxMultle[j, m] = res;
+            matxMultiple[j, m] = res;
         }
 
     }
 
-    return matxMultle;
+    return matxMultiple;
 }
 
-int[,] matrix1 = ArrayMatrixIntCreater(3, 3);
-System.Console.WriteLine();
-ArrayMatrixIntPrint(matrix1);
+int[,] matrix1 = MatrixIntCreater(3, 3);
+MatrixIntPrint(matrix1);
 
-int[,] matrix2 = ArrayMatrixIntCreater(3, 3);
-System.Console.WriteLine();
-ArrayMatrixIntPrint(matrix2);
+System.Console.WriteLine("*");
+
+int[,] matrix2 = MatrixIntCreater(3, 3);
+MatrixIntPrint(matrix2);
+
+System.Console.WriteLine("=");
 
 int[,] matrixM = MatrixMultiple(matrix1, matrix2);
-System.Console.WriteLine();
-ArrayMatrixIntPrint(matrixM);
+MatrixIntPrint(matrixM);
