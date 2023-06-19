@@ -129,5 +129,5 @@ void MatrixUpwarsdFill(int[,] mtx, int iNumber, int jNumber, int countNum,
 
 }
 
-int[,] matrix = MatrixIntSpiralwardsCreater(8, 8);
+int[,] matrix = MatrixIntSpiralwardsCreater(6, 8);
 MatrixIntPrint(matrix);
