@@ -79,52 +79,10 @@ void ArrayDescendedSort(int[] arr)
 }
 
 
-int[,] matrix = MatrixIntCreater(6, 4, -9, 100);
+int[,] matrix = MatrixIntCreater(4, 4, -9, 100);
 MatrixIntPrint(matrix);
+Console.WriteLine();
 
 MatrixDescendedRowsMaker(matrix);
 Console.WriteLine();
 MatrixIntPrint(matrix);
-
-
-
-
-//   этот метод не работает корректно из-за скорости потоков????
-
-
-// void MatrixDescendedRowsMaker(int[,] mtx)
-// {
-//     int maxVal = 0;
-//     int temp = 0;
-//     int count = 0;
-//     int maxRow = 0;
-//     int maxCol = 0;
-//     for (int i = 0; i < mtx.GetLength(0); i++)
-//     {
-//         count = 0;
-//         maxVal = mtx[i, 0];
-//         Console.WriteLine($"maxVal: {maxVal}, count: {count}");
-//         while (count < mtx.GetLength(1)-1)
-//         {
-//             for (int j = count; j < mtx.GetLength(1); j++)
-//             {
-//                 Console.WriteLine($"maxVal: {maxVal}, count and j: {count}");
-//                 Console.WriteLine($"maxVal: {maxVal}, count and j: {count}");
-//                 if (mtx[i, j] > maxVal)
-//                 {
-//                     maxVal = mtx[i, j];
-//                     maxRow = i;
-//                     maxCol = j;
-//                 }
-//             }
-//             temp = mtx[i, count];
-//             mtx[i, count] = maxVal;
-//             mtx[maxRow, maxCol] = temp;
-//             count++;
-//             maxVal = mtx[i, count];
-
-//             ArrayMatrixIntPrint(mtx);
-//             Console.WriteLine($"maxVal: {maxVal}, count and j: {count}");
-//         }
-//     }
-// }
