@@ -5,9 +5,20 @@
 
 void NaturalNumbers(int startN, int num)
 {
-    if (num < startN) return;
-    NaturalNumbers(startN, num - 1);
-    Console.Write($"{num} ");
+    if (startN < num)
+    {
+        Console.Write($"{startN} ");
+        NaturalNumbers(startN + 1, num);
+    }
+    else if (num < startN)
+    {
+        Console.Write($"{startN} ");
+        NaturalNumbers(startN - 1, num);
+    }
+    else if (startN == num)
+    {
+        Console.Write($"{startN} ");
+    }
 }
 
 Console.Write("Введите стартовое число: ");
