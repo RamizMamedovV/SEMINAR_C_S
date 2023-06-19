@@ -31,22 +31,22 @@ void MatrixIntPrint(int[,] mtx)
     }
 }
 
-int[,] MatrixChangeRowsToColumns(int[,] mtx)
-{
-    int rows = mtx.GetLength(0);
-    int col = mtx.GetLength(1);
+// int[,] MatrixChangeRowsToColumns(int[,] mtx)
+// {
+//     int rows = mtx.GetLength(0);
+//     int col = mtx.GetLength(1);
 
-    int[,] newMtx = new int[col, rows];
+//     int[,] newMtx = new int[col, rows];
 
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < col; j++)
-        {
-            newMtx[j, i] = mtx[i, j];
-        }
-    }
-    return newMtx;
-}
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < col; j++)
+//         {
+//             newMtx[j, i] = mtx[i, j];
+//         }
+//     }
+//     return newMtx;
+// }
 
 void MatrixChangeRowsToColumnsVoid(int[,] mtx)
 {
@@ -77,6 +77,7 @@ int[,] matrix = MatrixIntCreator(4, 5);
 MatrixIntPrint(matrix);
 System.Console.WriteLine();
 
+// 2й способ
 // int[,] newMatrix = MatrixChangeRowsToColumns(matrix);
 // MatrixIntPrint(newMatrix);
 // System.Console.WriteLine();
