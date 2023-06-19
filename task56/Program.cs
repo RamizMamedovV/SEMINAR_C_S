@@ -80,7 +80,7 @@ int ArrayMinIndex(int[] arr)
     return res;
 }
 
-int[,] matrix = MatrixIntCreater(6, 4, -9, 9);
+int[,] matrix = MatrixIntCreater(3, 4, -9, 9);
 MatrixIntPrint(matrix);
 
 System.Console.WriteLine();
