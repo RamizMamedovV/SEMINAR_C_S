@@ -32,3 +32,22 @@ void ConsecutiveDigits(int num)
     Console.Write($"{num} ");
     ConsecutiveDigits(num - 1);
 }
+
+
+//              не получается корректный вывод!!
+
+// System.Console.WriteLine();
+// ConsecutiveDigits1(number);
+
+// void ConsecutiveDigits1(int num)
+// {
+//     if (IsNaturalNumber(num))
+//     {
+//         Console.Write($"N = {num} -> ");
+//         if (num == 0) return;
+//         Console.Write("'");
+//         //Console.Write($"{num} ");
+//         ConsecutiveDigits(num - 1);
+//         Console.Write("'");
+//     }
+// }
