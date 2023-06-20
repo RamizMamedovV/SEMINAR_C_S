@@ -11,12 +11,8 @@ System.Console.WriteLine($"Сумма цифр в числе {number} = {result}
 
 int SumDigitsRecursion(int num)
 {
-    int sum = 0;
-    if (num == 0) return;
-    sum += num % 10;
-    SumDigitsRecursion(num / 10);
-
-    return sum;
+    if (num == 0) return 0;
+    else return num % 10 + SumDigitsRecursion(num / 10);
 }
 
 // int SumDigitsRecursion(int num)
