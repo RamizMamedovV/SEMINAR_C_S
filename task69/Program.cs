@@ -4,15 +4,16 @@
 //
 // А= 3; В = 5 -> 243 (3)^5
 
-Console.Write("Введите 2 числа: ");
+Console.Write("Введите число: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите степень: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
 
-int res = involuteNumber(number1, number2);
+int res = ExponentiationNumber(number1, number2);
 System.Console.WriteLine(res);
 
-int involuteNumber(int num1, int num2)
+int ExponentiationNumber(int num1, int num2)
 {
-    if(num2 == 1) return num1;
-    else return num1 * involuteNumber(num1, num2 -1);
+    if(num2 == 0) return 1;
+    return num1 * ExponentiationNumber(num1, num2 -1);
 }
