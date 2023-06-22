@@ -7,47 +7,27 @@
 Console.Write("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-PrintConsecutiveDigits(number);
+PrintConsecutDigDown(number);
 
-void PrintConsecutiveDigits(int num)
+void PrintConsecutDigDown(int num)
 {
-    if (IsNaturalNumber(num))
+    if (num == 1)
     {
-        Console.Write($"N = {num} -> ");
-        Console.Write("'");
-        ConsecutiveDigits(num);
+        Console.Write($"N = {num} -> '{num}'");
+    }
+
+    else if (num > 1)
+    {
+        Console.Write($"N = {num} -> '{num}");
+        ConsecutiveDigitsDown(num - 1);
         Console.Write("'");
     }
     else Console.WriteLine("Введено не натуральное число!");
 }
 
-bool IsNaturalNumber(int num)
-{
-    return num > 0 ? true : false;
-}
-
-void ConsecutiveDigits(int num)
+void ConsecutiveDigitsDown(int num)
 {
     if (num == 0) return;
-    Console.Write($"{num} ");
-    ConsecutiveDigits(num - 1);
+    Console.Write($", {num}");
+    ConsecutiveDigitsDown(num - 1);
 }
-
-
-//              не получается корректный вывод!!
-
-// System.Console.WriteLine();
-// ConsecutiveDigits1(number);
-
-// void ConsecutiveDigits1(int num)
-// {
-//     if (IsNaturalNumber(num))
-//     {
-//         Console.Write($"N = {num} -> ");
-//         if (num == 0) return;
-//         Console.Write("'");
-//         //Console.Write($"{num} ");
-//         ConsecutiveDigits(num - 1);
-//         Console.Write("'");
-//     }
-// }
